@@ -36,9 +36,20 @@ function App() {
 
   return (
     <>
-      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-        <ModeToggle />
+    <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
+      <header className="  p-4 shadow">
+        <div className="container mx-auto flex justify-between items-center">
+          <h1 className="text-2xl font-semibold">MySite</h1>
+          <nav className="space-x-4">
+            <a href="#" className="hover:underline">Home</a>
+            <a href="#" className="hover:underline">About</a>
+            <a href="#" className="hover:underline"><ModeToggle /></a>
+          </nav>
+        </div>
+      </header>
         <div className="flex flex-col items-center justify-center h-screen border-red-500">
+        
+        
           <Avatar className="h-32 w-32">
             <AvatarImage
               src="../pics/wallhaven-kxmxw1_1440x1440.png"
@@ -78,8 +89,9 @@ function App() {
           <p className="read-the-docs">
             Click on the Vite and React logos to learn more
           </p>
+          
         </div>
-      </ThemeProvider>
+        </ThemeProvider>
     </>
   );
 }
